@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
 
 * {
   margin: 0;
@@ -41,7 +42,8 @@ body {
   }
 
   .btn {
-    @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px] hover:bg-orange-600 transition-colors;
+    @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px]
+    hover:bg-orange-600 transition-colors;
   }
 
   .heading {
@@ -66,7 +68,8 @@ body {
   }
 
   .form__input {
-    @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none focus:border-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer rounded-md;
+    @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none focus:border-primaryColor
+    text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer rounded-md;
   }
 }
 
@@ -119,5 +122,3 @@ body {
     display: block;
   }
 }
-
-
