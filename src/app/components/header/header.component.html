@@ -1,0 +1,43 @@
+<header [ngClass]="{ 'sticky__header': isSticky }"  class="header flex items-center">
+  <div class="container">
+    <div class="flex items-center justify-between">
+      <div>
+        <img class="p-2 rounded-full" src="/assets/images/logo.svg" alt="">
+      </div>
+
+      <div class="navigation" [ngClass]="{'show__menu': isMenuVisible}">
+        <ul class="menu flex items-center gap-[2.7rem]">
+          <li *ngFor="let link of links; let index = index">
+     <a [routerLink]="link.path" routerLinkActive="active"
+     (click)="handleLinkClick(link)"
+   [class]="link.isActive ? 'text-primaryColor text-[20px] leading-9 font-[700]' :
+   'text-textColor text-[19px] leading-9 font-[600] hover:text-primaryColor transition-colors'">
+  {{ link.display }}
+</a>
+    </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="hidden">
+          <a routerLink="">
+            <figure class="w-[35px] h-[35px] rounded-full cursor-pointer mt-2">
+              <img src="/assets/images/avatar-icon.png" alt="">
+            </figure>
+          </a>
+        </div>
+
+        <a routerLink="login">
+          <button class="btn bg-primaryColor py-2 px-6
+           text-white text-[20px] leading-9 font-[600] h-[44px] flex items-center justify-center rounded-[50px] hover:bg-orange-600 transition-colors mt-2">
+            Login
+          </button>
+        </a>
+
+        <span class="md:hidden" (click)="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>

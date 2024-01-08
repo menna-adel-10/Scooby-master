@@ -1,0 +1,38 @@
+<section class="bg-[#f4ede6]">
+  <div class="container text-center">
+    <h2 class="heading">Find a Doctor</h2>
+    <div class="max-w-[570px] mt-[30px] mx-auto bg-[#ffffff] rounded-md flex items-center justify-between">
+      <input
+      type="search"
+      class="py-4 pl-4 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-textColor"
+      placeholder="Search for a Doctor"
+      >
+      <button class="btn mt-0 rounded-[0px] rounded-r-md">
+        Search
+      </button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+  <app-doctor-card *ngFor="let item of doctors
+  let i = index" [item]="item" [index]="i"></app-doctor-card>
+</div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+     <div class="xl:w-[470px] mx-auto">
+      <h2 class="heading text-center">What our Patients say</h2>
+      <p class="text__para text-center">
+        World-class care for everyone. One health System offers unmatched, expert health care.
+      </p>
+    </div>
+
+    <app-testimonial></app-testimonial>
+  </div>
+</section>

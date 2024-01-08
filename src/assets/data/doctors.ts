@@ -1,0 +1,32 @@
+export const doctors = [
+  {
+    id: "01",
+    name: "Dr. Andy schwarz",
+    specialization: "Surgeon",
+    avgRating: 4.9,
+    totalRating: 768,
+    photo: '/assets/images/doctor-img01.png',
+    totalPatients: 1500,
+    hospital: "Mount Adora Hospital, Sylhet.",
+  },
+  {
+    id: "02",
+    name: "Dr. Salima Adam",
+    specialization: "Neurologist",
+    avgRating: 4.9,
+    totalRating: 1243,
+    photo: "/assets/images/doctor-img02.png",
+    totalPatients: 1500,
+    hospital: "Mount Adora Hospital, Sylhet.",
+  },
+  {
+    id: "03",
+    name: "Dr. Farida Uddin",
+    specialization: "Dermatologist",
+    avgRating: 4.8,
+    totalRating: 2742,
+    photo: "/assets/images/doctor-img03.png",
+    totalPatients: 1500,
+    hospital: "Mount Adora Hospital, Sylhet.",
+  },
+];

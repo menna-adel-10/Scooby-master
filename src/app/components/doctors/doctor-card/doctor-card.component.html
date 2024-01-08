@@ -1,0 +1,41 @@
+<div class="p-3 lg:p-5">
+  <div>
+    <img class="w-full" [src]="item.photo" alt="">
+  </div>
+
+  <h2 class="text-[18px] leading-[30px] lg:text-[26px] lg:leading-9 text-headingColor font-[700] mt-3 lg:mt-5">
+    {{item.name}}
+  </h2>
+
+  <div class="mt-2 lg:mt-4 flex items-center justify-between">
+    <span class="bg-[#ccf0f3] text-irisBlueColor py-1 px-2 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">
+      {{item.specialization}}
+    </span>
+
+    <div class="flex items-center gap-[6px]">
+      <span class="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
+        <img src="/assets/images/Star.png" alt=""> {{item.avgRating}}
+      </span>
+      <span class="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">
+        ({{item.totalRating}})
+      </span>
+    </div>
+  </div>
+
+  <div class="mt-[18px] lg:mt-5 flex items-center justify-between">
+    <div>
+      <h3 class="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor">
+        +{{item.totalPatients}} patients
+      </h3>
+      <p class="text-[14px] leading-6 font-[400] text-textColor">
+        At {{item.hospital}}
+      </p>
+    </div>
+
+    <a routerLink="doctors/"
+      class="w-[44px] h-[44px] rounded-full border border-solid border-[#181a1e] mt-[30px]
+       flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+      <i class="fa-solid fa-arrow-right group-hover:text-white"></i>
+    </a>
+  </div>
+</div>

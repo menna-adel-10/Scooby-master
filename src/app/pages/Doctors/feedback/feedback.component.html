@@ -1,0 +1,36 @@
+<div class="mb-[50px]">
+  <h4 class="text-[20px] leading-[30px] font-bold text-headingColor mb-[30px]">
+All reviews (512)
+  </h4>
+
+  <div class="flex justify-between gap-10 mb-[30px]">
+    <div class="flex gap-3">
+      <figure class="w-10 h-10 rounded-full">
+        <img class="w-full" src="/assets/images/avatar-icon.png" alt="">
+      </figure>
+
+      <div>
+        <h5 class="text-[16px] leading-6 text-primaryColor font-bold">
+          Kareem Mahmoud
+        </h5>
+        <p class="text-[14px] leading-6 text-textColor">
+          {{ formattedDate("02-14-2023") }}
+        </p>
+        <p class="text__para mt-3 font-medium text-[15px]">
+          Good services, highly recommended 👍
+        </p>
+      </div>
+    </div>
+
+    <div class="flex gap-1">
+  <div *ngFor="let _ of stars">
+    <i class="fa-solid fa-star" [style.color]="color"></i>
+  </div>
+</div>
+</div>
+
+<div *ngIf="!showFeedbackForm" class="text-center">
+  <button class="btn" (click)="showForm()">Give Feedback</button>
+</div>
+<app-feedback-form *ngIf="showFeedbackForm"></app-feedback-form>
+</div>
