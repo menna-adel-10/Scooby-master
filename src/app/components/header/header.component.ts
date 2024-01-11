@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit{
 
   isMenuVisible = false;
   isSticky = false;
-  
+
 
   constructor(private renderer: Renderer2,
     private el: ElementRef,
@@ -32,6 +32,27 @@ export class HeaderComponent implements OnInit{
         }, 0);
       }
     });
+  }
+
+
+   @HostListener('document:click', ['$event'])
+  handleDocumentClick(event: MouseEvent): void {
+    const isClickInsideMenu = this.isClickInsideMenu(event);
+
+    if (this.isMenuVisible && !isClickInsideMenu) {
+      this.toggleMenu();
+    }
+  }
+
+  toggleMenu(): void {
+    console.log('Menu toggled');
+    this.isMenuVisible = !this.isMenuVisible;
+  }
+
+  private isClickInsideMenu(event: MouseEvent): any {
+     const menuButton = document.getElementById('menuButton');
+
+    return menuButton && (menuButton.contains(event.target as Node) || event.target === menuButton);
   }
 
   handleLinkClick(clickedLink: any): void {
@@ -54,13 +75,6 @@ export class HeaderComponent implements OnInit{
       activeLink.isActive = true;
     }
   }
-
-
-  toggleMenu(): void {
-     console.log('Menu toggled');
-    this.isMenuVisible = !this.isMenuVisible;
-  }
-
 
 
 @HostListener('window:scroll', [])

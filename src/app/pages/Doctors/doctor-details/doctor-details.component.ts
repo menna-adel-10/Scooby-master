@@ -5,6 +5,7 @@ import { DoctorAboutComponent } from '../doctor-about/doctor-about.component';
 import { FeedbackComponent } from '../feedback/feedback.component';
 import { FormBuilder } from '@angular/forms';
 import { SidePanelComponent } from '../side-panel/side-panel.component';
+import { doctors } from '../../../../assets/data/doctors';
 
 @Component({
   selector: 'app-doctor-details',
@@ -14,6 +15,7 @@ import { SidePanelComponent } from '../side-panel/side-panel.component';
   templateUrl: './doctor-details.component.html'
 })
 export class DoctorDetailsComponent {
+  doctors = doctors;
 
 tabForm = this.fb.group({
     tab: ['about']

@@ -11,7 +11,7 @@ export const doctors = [
   },
   {
     id: "02",
-    name: "Dr. Salima Adam",
+    name: "Dr. Selina Adam",
     specialization: "Neurologist",
     avgRating: 4.9,
     totalRating: 1243,
